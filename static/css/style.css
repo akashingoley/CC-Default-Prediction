@@ -4,8 +4,8 @@ body{
     background-color: thistle;
 }
 .main-header{
-    background-color: rgba(0, 0, 0, .7);
-    background-image: url("../Images/credit-card.jpg");
+    background-color: rgba(0, 0, 0, .6);
+    background-image: url("../images/background/credit-card.jpg");
     background-blend-mode: multiply;
     background-size: cover;
     padding: 15px;
@@ -48,14 +48,19 @@ body{
     font-size: 20px;
 }
 
+.svg-img{
+    width: 170px;
+    margin-left: 40px;
+    position:absolute;
+    right: 300px;
+    
+}
 
 .repayment-container{
     /* background-color: yellow; */
     display: block;
     margin-left: 40px;
-    margin-right: 40px;
-    justify-content: center;
-    
+    margin-right: 40px;    
 }
 
 .repayment-info{
@@ -63,6 +68,7 @@ body{
     display: flex;    
     margin-bottom: 10px;
     text-align: center;
+    /* justify-content: center; */
 }
 
 .repayment-info select{
@@ -78,8 +84,8 @@ body{
 
 .bill-header{
     text-align: center;
-    margin: 30px;
-    font-size: 30px;
+    margin: 20px;
+    font-size: 20px;
 }
 
 .bill-summary-container{
@@ -166,6 +172,7 @@ body{
     display: flex;
     justify-content: center;
     font-size: 30px;
+    margin: 20px;
 }
 
 .footer{
