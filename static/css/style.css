@@ -21,8 +21,8 @@ body{
 .basic-container{
     display: flex;
     /* background-color: yellow; */
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
     justify-content: center;
     text-align: center;
 }
@@ -52,8 +52,8 @@ body{
 .repayment-container{
     /* background-color: yellow; */
     display: block;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 40px;
+    margin-right: 40px;
     justify-content: center;
     
 }
@@ -68,7 +68,7 @@ body{
 .repayment-info select{
     background-color: wheat;
     position: absolute;
-    left: 200px;
+    left: 250px;
     border-radius: 5px;
     width: 150px;
     text-align: center;
@@ -78,15 +78,15 @@ body{
 
 .bill-header{
     text-align: center;
-    margin: 20px;
-    font-size: 20px;
+    margin: 30px;
+    font-size: 30px;
 }
 
 .bill-summary-container{
     /* background-color: tomato; */
     display: flex;
-    margin-right: 25px;
-    margin-left: 25px;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .bill-amount-container{
@@ -106,7 +106,7 @@ body{
 .bill-amount-info input{
     background-color: wheat;
     position: absolute;
-    left: 25%;
+    left: 24%;
     border-radius: 5px;
     width: 150px;
     text-align: center;
@@ -130,7 +130,7 @@ body{
 .bill-paid-info input{
     background-color: wheat;
     position:absolute;
-    left: 75%;
+    left: 70%;
     border-radius: 5px;
     width: 115px;
     text-align: center;
@@ -146,7 +146,6 @@ body{
 .btn-1 {
     background-color:red;
     color: whitesmoke;
-    margin: 10px;
     text-align: center;
     border-radius: 6px;    
     width: 150px;
