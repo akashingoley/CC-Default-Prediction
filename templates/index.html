@@ -11,8 +11,12 @@
 
     <header style="color:white;" class="main-header">
 	<h1>Credit Card Default Prediction</h1>
-    </header>
+    </header>          
     
+    <div class="prediction">
+        {{ prediction_text}}
+    </div>
+
     <form action="{{ url_for('predict') }}" method="POST">
         
         <h2 class="basic-info-header">Basic Information</h2>
@@ -63,6 +67,8 @@
         </div>
 
         <h2 class="repayment-info-header">Repayment Information</h2>
+        <img class="svg-img" src="./images/undraw/undraw_personal_finance_tqcd.svg" >
+
         <div class="repayment-container">
 
             <div class="repayment-info">
@@ -271,10 +277,9 @@
         </div>
         
         </form>
+
+        
         <br>
-        <div class="prediction">
-            {{ prediction_text}}
-        </div>
         <br>
         <br>
         <br>
