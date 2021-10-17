@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Machine Learning API</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='..//static/css/style.css') }}" type="text/css" />
+</head>
+
+<body>
+
+    <header style="color:white;" class="main-header">
+	<h1>Credit Card Default Prediction</h1>
+    </header>
+    
+    <form action="{{ url_for('predict') }}" method="POST">
+        
+        <h2 class="basic-info-header">Basic Information</h2>
+        <div class="basic-container">
+
+            <div class="basic-infos">
+                <div>Sex</div>
+                <div>
+                    <select class="intake" name="SEX">
+                        <option value=1>Male</option>
+                        <option value=2>Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="basic-infos">
+                <div>Age</div>
+                <div><input class="intake" type="number" name="AGE" id="AGE" placeholder="Age"></div>
+            </div>
+
+            <div class="basic-infos">
+                <div>Education</div>
+                <div>
+                    <select class="intake" name="EDUCATION">
+                        <option value=1>Graduate</option>
+                        <option value=2>University</option>
+                        <option value=3>High School</option>
+                        <option value=4>Others</option>
+                        <option value=5>Unknown</option>            
+                    </select>
+                </div>
+            </div>
+
+            <div class="basic-infos">
+                <div>Marriage</div>
+                <div>
+                    <select class="intake" name="MARRIAGE">
+                        <option value=1>Married</option>
+                        <option value=2>Single</option>
+                        <option value=3>Others</option>           
+                    </select>
+                </div>
+            </div>
+            <div class="basic-infos">
+                <div>Limit Balance</div>
+                <div><input class="intake" type="number" name="LIMIT_BAL" id="LIMIT_BAL" placeholder="Limit Balance" ></div>
+            </div>
+            
+        </div>
+
+        <h2 class="repayment-info-header">Repayment Information</h2>
+        <div class="repayment-container">
+
+            <div class="repayment-info">
+                <div>Repayment of 1st month</div>
+                <div>
+                    <select name="PAY_1">
+                        <option value=-1>Paid Duly</option>
+                        <option value=1>Delayed for 1 month</option>
+                        <option value=2>Delayed for 2 month</option>
+                        <option value=3>Delayed for 3 month</option>
+                        <option value=4>Delayed for 4 month</option>
+                        <option value=5>Delayed for 5 month</option>
+                        <option value=6>Delayed for 6 month</option> 
+                        <option value=7>Delayed for 7 month</option>
+                        <option value=8>Delayed for 8 month</option>          
+                    </select>
+                </div>
+            </div>
+
+            <div class="repayment-info">
+                <div>Repayment of 2nd month</div>
+                <div>
+                    <select name="PAY_2">
+                        <option value=-1>Paid Duly</option>
+                        <option value=1>Delayed for 1 month</option>
+                        <option value=2>Delayed for 2 month</option>
+                        <option value=3>Delayed for 3 month</option>
+                        <option value=4>Delayed for 4 month</option>
+                        <option value=5>Delayed for 5 month</option>
+                        <option value=6>Delayed for 6 month</option> 
+                        <option value=7>Delayed for 7 month</option>
+                        <option value=8>Delayed for 8 month</option>          
+                    </select>
+                </div>
+            </div>
+
+            <div class="repayment-info">
+                <div>Repayment of 3rd month</div>
+                <div>
+                    <select name="PAY_3">
+                        <option value=-1>Paid Duly</option>
+                        <option value=1>Delayed for 1 month</option>
+                        <option value=2>Delayed for 2 month</option>
+                        <option value=3>Delayed for 3 month</option>
+                        <option value=4>Delayed for 4 month</option>
+                        <option value=5>Delayed for 5 month</option>
+                        <option value=6>Delayed for 6 month</option> 
+                        <option value=7>Delayed for 7 month</option>
+                        <option value=8>Delayed for 8 month</option>          
+                    </select>
+                </div>
+            </div>
+            
+            <div class="repayment-info">
+                <div>Repayment of 4th month</div>
+                <div>
+                    <select name="PAY_4">
+                        <option value=-1>Paid Duly</option>
+                        <option value=1>Delayed for 1 month</option>
+                        <option value=2>Delayed for 2 month</option>
+                        <option value=3>Delayed for 3 month</option>
+                        <option value=4>Delayed for 4 month</option>
+                        <option value=5>Delayed for 5 month</option>
+                        <option value=6>Delayed for 6 month</option> 
+                        <option value=7>Delayed for 7 month</option>
+                        <option value=8>Delayed for 8 month</option>          
+                    </select>
+                </div>
+            </div>
+
+            <div class="repayment-info">
+                <div>Repayment of 5th month</div>
+                <div>
+                    <select name="PAY_5">
+                        <option value=-1>Paid Duly</option>
+                        <option value=1>Delayed for 1 month</option>
+                        <option value=2>Delayed for 2 month</option>
+                        <option value=3>Delayed for 3 month</option>
+                        <option value=4>Delayed for 4 month</option>
+                        <option value=5>Delayed for 5 month</option>
+                        <option value=6>Delayed for 6 month</option> 
+                        <option value=7>Delayed for 7 month</option>
+                        <option value=8>Delayed for 8 month</option>          
+                    </select>
+                </div>
+            </div>
+
+            <div class="repayment-info">
+                <div>Repayment of 6th month</div>
+                <div>
+                    <select name="PAY_6">
+                        <option value=-1>Paid Duly</option>
+                        <option value=1>Delayed for 1 month</option>
+                        <option value=2>Delayed for 2 month</option>
+                        <option value=3>Delayed for 3 month</option>
+                        <option value=4>Delayed for 4 month</option>
+                        <option value=5>Delayed for 5 month</option>
+                        <option value=6>Delayed for 6 month</option> 
+                        <option value=7>Delayed for 7 month</option>
+                        <option value=8>Delayed for 8 month</option>          
+                    </select>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <h2 class="bill-header">Bill Summary</h2>
+        <div class="bill-summary-container">
+
+        <div class="bill-amount-container">
+
+            <div class="bill-amount-info">
+                <div>Bill Amount of 1st month</div>
+                <div>
+                    <input type="number" name="BILL_AMT1" placeholder="Bill Amount" >
+                </div>
+            </div>
+
+            <div class="bill-amount-info">
+                <div>Bill Amount of 2nd month</div>
+                <div>
+                    <input type="number" name="BILL_AMT2" placeholder="Bill Amount" >
+                </div>
+            </div>
+
+            <div class="bill-amount-info">
+                <div>Bill Amount of 3rd month</div>
+                <div>
+                    <input type="number" name="BILL_AMT3" placeholder="Bill Amount" >
+                </div>
+            </div>
+
+            <div class="bill-amount-info">
+                <div>Bill Amount of 4th month</div>
+                <div>
+                    <input type="number" name="BILL_AMT4" placeholder="Bill Amount" >
+                </div>
+            </div>
+
+            <div class="bill-amount-info">
+                <div>Bill Amount of 5th month</div>
+                <div>
+                    <input type="number" name="BILL_AMT5" placeholder="Bill Amount" >
+                </div>
+            </div>
+
+            <div class="bill-amount-info">
+                <div>Bill Amount of 6th month</div>
+                <div>
+                    <input type="number" name="BILL_AMT6" placeholder="Bill Amount" >
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bill-paid-container">
+            <div class="bill-paid-info">
+                <div>Amount Paid in 1st month</div>
+                <div>
+                    <input type="number" name="PAY_AMT1" id="PAY_AMT1" placeholder="Bill Amount Paid" >
+                </div>
+            </div>
+    
+            <div class="bill-paid-info">
+                <div>Amount Paid in 2nd month</div>
+                <div>
+                    <input type="number" name="PAY_AMT2" id="PAY_AMT2" placeholder="Bill Amount Paid" >
+                </div>
+            </div>
+            
+            <div class="bill-paid-info">
+                <div>Amount Paid in 3rd month</div>
+                <div>
+                    <input type="number" name="PAY_AMT3" id="PAY_AMT3" placeholder="Bill Amount Paid" >
+                </div>
+            </div>
+            
+            <div class="bill-paid-info">
+                <div>Amount Paid in 4th month</div>
+                <div>
+                    <input type="number" name="PAY_AMT4" id="PAY_AMT4" placeholder="Bill Amount Paid" >
+                </div>
+            </div>
+            
+            <div class="bill-paid-info">
+                <div>Amount Paid in 5th month</div> 
+                <div>
+                    <input type="number" name="PAY_AMT5" id="PAY_AMT5" placeholder="Bill Amount Paid" >
+                </div>
+            </div>
+            
+            <div class="bill-paid-info">
+                <div>Amount Paid in 6th month</div>
+                <div>
+                    <input type="number" name="PAY_AMT6" id="PAY_AMT6" placeholder="Bill Amount Paid" >
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+        <div class="submit-container">
+            <button type="submit" class="btn-1">PREDICT!</button>
+        </div>
+        
+        </form>
+        <br>
+        <div class="prediction">
+            {{ prediction_text}}
+        </div>
+        <br>
+        <br>
+        <br>
+        <footer class="footer">
+            <h5>©2021 Akash Ingoley</h5>
+        </footer>
+
+
+
+    </div>
+
+<!--     
+<style>
+
+/* Background Image */
+body
+{
+/* background-image:url("https://github.com/akashingoley/CC-Default-Prediction/blob/master/Images/cc-image3.jpg?raw=true"); */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+
+}
+
+/* Color */
+
+body{
+	font-family: Arial, Helvetica,sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+   
+/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> */
+
+</style> -->
+
+
+</body>
+
+</html>
