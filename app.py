@@ -46,7 +46,7 @@ def predict():
     else:
         label = 'Defaulted'
 
-    return render_template('index.html', prediction_text='Credit card will be {}'.format(label))
+    return render_template('result.html', prediction_text=label)
 
 
 if __name__ == "__main__":
