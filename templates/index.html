@@ -25,7 +25,7 @@
             <div class="basic-infos">
                 <div>Sex</div>
                 <div>
-                    <select class="intake" name="SEX" required> 
+                    <select class="intake" name="SEX"> 
                         <option value=1>Male</option>
                         <option value=2>Female</option>
                     </select>
@@ -33,7 +33,7 @@
             </div>
             <div class="basic-infos">
                 <div>Age</div>
-                <div><input class="intake" type="number" name="AGE" id="AGE" placeholder="Age" required></div>
+                <div><input class="intake" type="number" name="AGE" id="AGE" placeholder="Age" min="18" max="110" required></div>
             </div>
 
             <div class="basic-infos">
@@ -61,7 +61,7 @@
             </div>
             <div class="basic-infos">
                 <div>Limit Balance</div>
-                <div><input class="intake" type="number" name="LIMIT_BAL" id="LIMIT_BAL" placeholder="Limit Balance"  required></div>
+                <div><input class="intake" type="number" name="LIMIT_BAL" id="LIMIT_BAL" placeholder="Limit Balance" min="0" required></div>
             </div>
             
         </div>
@@ -188,42 +188,42 @@
             <div class="bill-amount-info">
                 <div>Bill Amount of 1st month</div>
                 <div>
-                    <input type="number" name="BILL_AMT1" placeholder="Bill Amount" required >
+                    <input type="number" name="BILL_AMT1" placeholder="Bill Amount" min="0" required >
                 </div>
             </div>
 
             <div class="bill-amount-info">
                 <div>Bill Amount of 2nd month</div>
                 <div>
-                    <input type="number" name="BILL_AMT2" placeholder="Bill Amount" required>
+                    <input type="number" name="BILL_AMT2" placeholder="Bill Amount" min="0" required>
                 </div>
             </div>
 
             <div class="bill-amount-info">
                 <div>Bill Amount of 3rd month</div>
                 <div>
-                    <input type="number" name="BILL_AMT3" placeholder="Bill Amount" required>
+                    <input type="number" name="BILL_AMT3" placeholder="Bill Amount" min="0" required>
                 </div>
             </div>
 
             <div class="bill-amount-info">
                 <div>Bill Amount of 4th month</div>
                 <div>
-                    <input type="number" name="BILL_AMT4" placeholder="Bill Amount"required >
+                    <input type="number" name="BILL_AMT4" placeholder="Bill Amount" min="0" required >
                 </div>
             </div>
 
             <div class="bill-amount-info">
                 <div>Bill Amount of 5th month</div>
                 <div>
-                    <input type="number" name="BILL_AMT5" placeholder="Bill Amount" required >
+                    <input type="number" name="BILL_AMT5" placeholder="Bill Amount" min="0" required >
                 </div>
             </div>
 
             <div class="bill-amount-info">
                 <div>Bill Amount of 6th month</div>
                 <div>
-                    <input type="number" name="BILL_AMT6" placeholder="Bill Amount" required >
+                    <input type="number" name="BILL_AMT6" placeholder="Bill Amount" min="0" required >
                 </div>
             </div>
 
@@ -233,42 +233,42 @@
             <div class="bill-paid-info">
                 <div>Amount Paid in 1st month</div>
                 <div>
-                    <input type="number" name="PAY_AMT1" id="PAY_AMT1" placeholder="Bill Amount Paid" required >
+                    <input type="number" name="PAY_AMT1" id="PAY_AMT1" placeholder="Bill Amount Paid" min="0" required >
                 </div>
             </div>
     
             <div class="bill-paid-info">
                 <div>Amount Paid in 2nd month</div>
                 <div>
-                    <input type="number" name="PAY_AMT2" id="PAY_AMT2" placeholder="Bill Amount Paid" required >
+                    <input type="number" name="PAY_AMT2" id="PAY_AMT2" placeholder="Bill Amount Paid" min="0" required >
                 </div>
             </div>
             
             <div class="bill-paid-info">
                 <div>Amount Paid in 3rd month</div>
                 <div>
-                    <input type="number" name="PAY_AMT3" id="PAY_AMT3" placeholder="Bill Amount Paid" required >
+                    <input type="number" name="PAY_AMT3" id="PAY_AMT3" placeholder="Bill Amount Paid" min="0" required >
                 </div>
             </div>
             
             <div class="bill-paid-info">
                 <div>Amount Paid in 4th month</div>
                 <div>
-                    <input type="number" name="PAY_AMT4" id="PAY_AMT4" placeholder="Bill Amount Paid" required >
+                    <input type="number" name="PAY_AMT4" id="PAY_AMT4" placeholder="Bill Amount Paid" min="0" required >
                 </div>
             </div>
             
             <div class="bill-paid-info">
                 <div>Amount Paid in 5th month</div> 
                 <div>
-                    <input type="number" name="PAY_AMT5" id="PAY_AMT5" placeholder="Bill Amount Paid" required >
+                    <input type="number" name="PAY_AMT5" id="PAY_AMT5" placeholder="Bill Amount Paid" min="0" required >
                 </div>
             </div>
             
             <div class="bill-paid-info">
                 <div>Amount Paid in 6th month</div>
                 <div>
-                    <input type="number" name="PAY_AMT6" id="PAY_AMT6" placeholder="Bill Amount Paid" required >
+                    <input type="number" name="PAY_AMT6" id="PAY_AMT6" placeholder="Bill Amount Paid" min="0" required >
                 </div>
             </div>
             
