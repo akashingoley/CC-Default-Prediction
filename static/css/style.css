@@ -10,12 +10,44 @@ body{
     background-size: cover;
     padding: 15px;
     text-align: center;
+    margin: 10px;
 }
 
 .basic-info-header{
     text-align: center;
     margin: 20px;
     font-size: 20px;
+}
+
+.basic-info-header::before{
+    content: "";
+    width: 500px;
+    height: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    z-index: -2;
+    bottom: 0px;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.basic-info-header::after{
+    content: "";
+    width: 500px;
+    height: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    z-index: -2;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+span{
+    background-color: thistle;
 }
 
 .basic-container{
@@ -30,16 +62,16 @@ body{
 .basic-infos{
     /* background-color: yellowgreen; */
     display: inline;
-    margin-right: 5px;
     flex:1 1;
 }
 
 .intake{
     background-color: wheat;
-    width: 95px;
+    width: 150px;
     text-align: center;
     border-radius: 5px;
     border-width: 1.5px;
+    margin: 5px;
 }
 
 .repayment-info-header{
@@ -48,12 +80,45 @@ body{
     font-size: 20px;
 }
 
-.svg-img{
-    width: 170px;
+.repayment-info-header::before{
+    content: "";
+    width: 470px;
+    height: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    z-index: -2;
+    bottom: 0px;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.repayment-info-header::after{
+    content: "";
+    width: 470px;
+    height: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    z-index: -2;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.svg-img1{
     margin-left: 40px;
     position:absolute;
-    right: 300px;
-    background-image: url("../images/undraw/undraw_personal_finance_tqcd.svg");
+    left: 70px;
+    width: 16%;
+}
+
+.svg-img2{
+    margin-left: 40px;
+    position:absolute;
+    right: 120px;
+    width: 13%;
 }
 
 .repayment-container{
@@ -67,14 +132,16 @@ body{
     /* background-color: yellowgreen; */
     display: flex;    
     margin-bottom: 10px;
-    text-align: center;
-    /* justify-content: center; */
+    justify-content: center;
+    position: relative;
+    right: 8%;
+    
 }
 
 .repayment-info select{
     background-color: wheat;
     position: absolute;
-    left: 250px;
+    right: 250px;
     border-radius: 5px;
     width: 150px;
     text-align: center;
@@ -88,6 +155,33 @@ body{
     font-size: 20px;
 }
 
+.bill-header::before{
+    content: "";
+    width: 500px;
+    height: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    z-index: -2;
+    bottom: 0px;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.bill-header::after{
+    content: "";
+    width: 500px;
+    height: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    z-index: -2;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
 .bill-summary-container{
     /* background-color: tomato; */
     display: flex;
@@ -99,7 +193,7 @@ body{
     /* background-color: turquoise; */
     display: block;
     text-align: center;
-    flex: 1 0;
+    flex: 1 1;
 }
 
 .bill-amount-info{
@@ -107,12 +201,13 @@ body{
     display: flex;
     margin-bottom: 10px;
     width: 100%;
+    margin-left: 80px;
 }
 
 .bill-amount-info input{
     background-color: wheat;
     position: absolute;
-    left: 24%;
+    left: 30%;
     border-radius: 5px;
     width: 150px;
     text-align: center;
@@ -131,14 +226,15 @@ body{
     display: flex;
     margin-bottom: 10px;
     width: 100%;
+    margin-left: 60px;
 }
 
 .bill-paid-info input{
     background-color: wheat;
     position:absolute;
-    left: 70%;
+    left: 75%;
     border-radius: 5px;
-    width: 115px;
+    width: 150px;
     text-align: center;
     border-width: 1.5px;
 }
@@ -156,7 +252,7 @@ body{
     border-radius: 6px;    
     width: 150px;
     height: 35px;
-    transition: all .2s ease-in-out;
+    transition: all .5s ease-in-out;
     border-width: 1.5px;
     font-size: 20px;
     box-shadow: inset 0 0 0 0 #f9e506;
