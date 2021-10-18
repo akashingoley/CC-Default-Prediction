@@ -68,7 +68,7 @@ body{
     background-color: #6C63FF;
     width: 150px;
     text-align: center;
-    color: black;
+    color: whitesmoke;
     border-radius: 5px;
     border-width: 1.5px;
     margin: 5px;
@@ -76,7 +76,7 @@ body{
 }
 
 input::placeholder{
-    color: black;
+    color: whitesmoke;
 }
 
 .repayment-info-header{
@@ -146,6 +146,7 @@ input::placeholder{
 
 .repayment-info select{
     background-color: #6C63FF;
+    color: whitesmoke;
     position: absolute;
     right: 325px;
     border-radius: 5px;

@@ -17,8 +17,8 @@
         <div class="prediction-answer">{{ prediction_text }}</div>
         <a class="reset" href="{{ url_for('Home') }}">Go Back?</a>
     </div>
-    
-    <img class="result-img" src="./images/undraw/result.svg">
+
+    <img class="result-img" src="{{ url_for('static', filename='./images/undraw/result.svg') }}">
 </body>
 
 </html>
