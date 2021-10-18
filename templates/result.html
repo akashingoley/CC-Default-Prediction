@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Machine Learning API</title>
+    <link rel="stylesheet" href="..//static/css/style.css" type="text/css" />
+</head>
+
+<body>
+    <header style="color:white;" class="main-header">
+        <h1>Credit Card Default Prediction</h1>
+    </header>
+
+    <div class="result-container">
+        <div class="result-header">Result</div>
+        <div class="prediction-text">Credit Card will be</div>
+        <div class="prediction-answer">{{ prediction_text }}</div>
+        <a class="reset" href="{{ url_for('Home') }}">Go Back?</a>
+    </div>
+    
+    <img class="result-img" src="./images/undraw/result.svg">
+</body>
+
+</html>
