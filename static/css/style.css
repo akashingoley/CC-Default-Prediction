@@ -216,6 +216,7 @@ input::placeholder{
 
 .bill-amount-info input{
     background-color: #6C63FF;
+    color: whitesmoke;
     position: absolute;
     left: 32%;
     border-radius: 5px;
@@ -243,6 +244,7 @@ input::placeholder{
 
 .bill-paid-info input{
     background-color: #6C63FF;
+    color: whitesmoke;
     position:absolute;
     left: 70%;
     border-radius: 5px;
