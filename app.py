@@ -42,9 +42,9 @@ def predict():
 
     prediction = model.predict(values)
     if prediction == 0:
-        label = 'Not Defaulted'
+        label = 'Not be Defaulted'
     else:
-        label = 'Defaulted'
+        label = 'Be Defaulted'
 
     return render_template('result.html', prediction_text=label)
 
