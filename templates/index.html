@@ -4,9 +4,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Machine Learning API</title>
+    <title>Credit Card Default</title>
+    <!-- Bootsrap css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- style css -->
     <link rel="stylesheet" href="..//static/css/style.css" type="text/css" />
 
     <!-- Fonts -->
@@ -80,17 +82,17 @@
         <!-- Repayment Information and images -->
         <section id="repayment">
 
-            <div class="container-fluid bg-color">
+            <div class="container-fluid ">
                 <h3>Repayment Information</h2>
                     <hr>
                     <div class="row justify-content-around">
 
-                        <div class="col-lg-3 col-md-6 col-sm-6 payment-col">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-sm-6 payment-col">
                             <img src="{{ url_for('static', filename='./images/undraw/undraw_personal_finance_tqcd.svg') }}"
                                 class="svg-img">
                         </div>
 
-                        <div class="col-lg-6 col-md-12 payment-col">
+                        <div class="col-lg-6 col-md-8 col-sm-10 payment-col">
 
                             <div class="payment-info">
                                 <h4>Repayment of 1st month</h4>
@@ -184,7 +186,7 @@
 
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-sm-6 payment-col">
+                        <div class="col-lg-3 col-md-5 col-sm-6 payment-col">
                             <img src="{{ url_for('static', filename='./images/undraw/undraw_Credit_card_re_blml.svg') }}"
                                 class="svg-img">
                         </div>
@@ -198,9 +200,9 @@
             <div class="container-fluid">
                 <h3>Bill Summary</h3>
                 <hr>
-                <div class="row">
+                <div class="row justify-content-around">
 
-                    <div class="col-lg-6 payment-col">
+                    <div class="col-lg-6 col-md-8 col-sm-10 payment-col">
 
                         <div class="payment-info">
                             <h4>Bill Amount of 1st month</h4>
@@ -229,7 +231,7 @@
 
                     </div>
 
-                    <div class="col-lg-6 payment-col">
+                    <div class="col-lg-6 col-md-8 col-sm-10 payment-col">
 
                         <div class="payment-info">
                             <h4>Amount Paid in 1st month</h4>

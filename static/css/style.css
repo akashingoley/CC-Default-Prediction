@@ -1,5 +1,5 @@
 body {
-    background-color: #ABA5FF;
+    background-color: #F6F6F6;
     text-align: center;
     margin: 0%;
     font-family: 'Ubuntu';
@@ -10,19 +10,19 @@ body {
 
 h1 {
     margin: auto auto auto 0%;
-    color: #EAE8FF;
+    color: #f6f6f6;
     font-family: 'Karla';
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 h2 {
-    color: #EAE8FF;
-    border-bottom: 1px solid #d5d2ff;
+    color: #f6f6f6;
+    border-bottom: 1px solid #eaeaea;
 }
 
 h3 {
-    color: #5c54da;
+    color: #161D6F;
 }
 
 h4 {
@@ -32,7 +32,7 @@ h4 {
 hr {
     border-style: dotted none none;
     border-width: 6px;
-    border-color: #EAE8FF;
+    border-color: #6C63FF;
     width: 12%;
     margin: auto;
 }
@@ -41,16 +41,12 @@ hr {
     padding: 3% 10%;
 }
 
-.bg-color {
-    background-color: #c0bcff;
-}
-
 /* Title Section */
 
 #title {
     display: flex;
     justify-content: center;
-    background-color: #5c54da;
+    background-color: #161D6F;
     padding: 0% 10%;
 }
 
@@ -67,7 +63,7 @@ hr {
 .intake {
     background-color: #6C63FF;
     text-align: center;
-    color: #EAE8FF;
+    color: #f6f6f6;
     border-radius: 5px;
     border-width: 1.5px;
     padding: 1px;
@@ -75,7 +71,7 @@ hr {
 }
 
 input::placeholder {
-    color: #EAE8FF;
+    color: #f6f6f6;
 }
 
 /* Payment info */
@@ -100,7 +96,7 @@ input::placeholder {
 
 .payment-info select {
     background-color: #6C63FF;
-    color: #EAE8FF;
+    color: #f6f6f6;
     border-radius: 5px;
     text-align: center;
     border-width: 1.5px;
@@ -112,7 +108,7 @@ input::placeholder {
 
 .payment-info input {
     background-color: #6C63FF;
-    color: #EAE8FF;
+    color: #f6f6f6;
     border-radius: 5px;
     width: 40%;
     text-align: center;
@@ -124,7 +120,7 @@ input::placeholder {
 /* Submit */
 
 .submit {
-    background-color: #5c54da;
+    background-color: #161D6F;
 }
 
 .btn-1 {
@@ -148,8 +144,8 @@ input::placeholder {
 /* Footer */
 
 .footer {
-    background-color: #5c54da;
-    color: #EAE8FF;
+    background-color: #161D6F;
+    color: #f6f6f6;
     padding-top: 5%;
     padding-bottom: .5%;
 }
@@ -169,11 +165,11 @@ h5 {
 }
 
 .prediction-text {
-    font-size: 2rem;
-    padding: 3%;
+    font-size: 1.8rem;
+    padding: 2%;
     letter-spacing: 2px;
-    color: #EAE8FF;
-    margin: 2% auto;
+    color: #f6f6f6;
+    margin: 1% auto;
     position: relative;
     background-color: black;
     animation: text 3s 1;
@@ -182,7 +178,7 @@ h5 {
 
 .prediction-answer {
     padding: 2%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #6C63FF;
 }
 
@@ -237,7 +233,7 @@ h5 {
     }
 
     .prediction-text , .prediction-answer{
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     .reset{
